@@ -1,0 +1,53 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{background}
+
+% Background Logo Settings
+\backgroundsetup{
+    scale=0.5,
+    color=black,
+    opacity=0.1,
+    angle=0,
+    position=current page.center,
+    contents={\includegraphics[width=8cm]{./static/cqalogo.png}}
+}
+
+\begin{document}
+
+\begin{center}
+    \Huge \textbf{Company} \\[5pt]
+    \large \textbf{Invoice} \\[5pt]
+    \normalsize
+    www.conquestace.com \\
+    Email: ashiful@conquestace.com | Phone: (XXX) XXX-XXXX \\[10pt]
+    \hrule
+\end{center}
+
+\begin{flushleft}
+    \textbf{Invoice Number:} {{invoice_number}} \\
+    \textbf{Date:} {{date}} \\
+    \textbf{Issued To:} {{customer_name}} \\
+\end{flushleft}
+
+\vspace{10pt}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{|p{0.4\linewidth}|p{0.1\linewidth}|p{0.15\linewidth}|p{0.15\linewidth}|}
+\hline
+\textbf{Description} & \textbf{Quantity} & \textbf{Unit Price (CAD)} & \textbf{Amount (CAD)} \\
+\hline
+{{items}}
+\textbf{Total Amount Owed} & & & \textbf{\${{total_amount}}} \\
+\hline
+\end{tabular}
+
+\vspace{20pt}
+\textbf{Payment Method:} \textbf{Paypal} to ashiful@conquestace.com  \\
+
+\vfill
+\begin{center}
+    \textit{This receipt was generated electronically and is valid without a signature.}
+\end{center}
+
+\end{document}
