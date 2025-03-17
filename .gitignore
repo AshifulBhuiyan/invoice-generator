@@ -32,3 +32,6 @@ Thumbs.db
 # Ignore Flask debug files
 instance/
 *.sqlite3
+
+#extra
+invoice_template.pdf
